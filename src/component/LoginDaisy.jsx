@@ -24,7 +24,7 @@ const LoginDaisy = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // console.log(email, password)
+    console.log(email, password)
 
     //::: RESET THE LOGIN ERROR AND SUCCESS MASSAGE STATES :::
     setLogInError("");
@@ -61,10 +61,12 @@ const handleForgetPassword = () => {
     if(!email){
         // setLogInError(error.message)
         console.log('Please provide email', emailRef.current.value)
+        alert('please provide a email')
         return;
     }
     else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email)){
         console.log('please provide a valid email')
+        alert('please provide a valid email')
         return;
     }
 
@@ -218,6 +220,7 @@ const handleGithubLogin = () => {
                   <button className=" btn-link font-medium text-pink-500 transition-colors hover:text-blue-700">
                     Register
                   </button>
+                  
                 </Link>
               </p>
             </div>
